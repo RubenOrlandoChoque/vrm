@@ -1,0 +1,179 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="titulo_app" tools:override="true">VRM Mobile</string>
+
+    <string name="log_in">Siguiente</string>
+    <string name="login">Ingrese su número de teléfono</string>
+    <string name="verify_note">Verificar</string>
+    <string name="phone_number">Número de Teléfono</string>
+    <string name="code_instructions"> </string>
+    <string name="verification_code">Código Verificación</string>
+    <string name="escribacodigo">Escriba el código que recibió en su teléfono</string>
+    <string name="recibecodigo">¿No recibió el código?</string>
+    <string name="reenviar">Reenviar</string>
+    <string name="cod_invalid">Código Inválido</string>
+    <string name="title">Aviso</string>
+    <string name="error">Error</string>
+    <string name="success">Éxito</string>
+    <string name="confirmation">Confirmación</string>
+    <string name="notification">Notificación</string>
+    <string name="message_delete">¿Desea borrar al miembro %1$s?</string>
+    <string name="message_delete_speaker">¿Desea borrar a %1$s?</string>
+    <string name="message_delete_note">¿Desea borrar la nota?</string>
+    <string name="message_delete_multimedia">¿Desea borrar el archivo adjunto?</string>
+    <string name="message_delete_multimedia_gallery">¿Desea borrar la foto?</string>
+    <string name="message_no_form_selected_to_sync">Es necesario previamente seleccionar un formulario</string>
+    <string name="message_no_type_survey">No tiene definido el tipo de relevamiento.</string>
+    <string name="message_no_internet_to_sync">"No se encuentra conectado a Internet para realizar la sincronización.</string>
+    <string name="message_problem_sync_phs">"Hubo un problema al guardar los cambios.</string>
+    <string name="message_data_saved_successfully">"Datos guardados con exito.</string>
+    <string name="confirm_sync_survey_and_multimedia">¿Desea sincronizar encuestas y archivos multimedia?</string>
+    <string name="not_survey_to_sync">No hay encuestas por sincronizar.</string>
+    <string name="message_delete_message">¿Desea descartar el mensaje?</string>
+    <string name="message_not_complete">Debe completar asunto y mensaje</string>
+    <string name="url_no_matches">El formato del Link no es correcto</string>
+    <string name="agree">Reintentar</string>
+    <string name="cod_invalido">Código Inválido</string>
+    <string name="accept">Aceptar</string>
+    <string name="log">Log</string>
+    <string name="clear">Limpiar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="permission_message">Para usar esta aplicación necesitas habilitar tu cámara</string>
+    <string name="btn_camera">PERMITIR CAMARA</string>
+    <string name="tab_1">Opcion 1</string>
+    <string name="tab_2">Opcion 2</string>
+    <string name="tab_3">Opcion 3</string>
+
+    <string name="title_no_internet_verify">No hay ninguna conexión adecuada de Internet. Verifique su conexión.</string>
+
+    <string name="action_sync_survey">Sincronizar</string>
+    <string name="action_refresh_sync">Reintentar</string>
+    <string name="action_back">Atras</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">news</string>
+
+    <string name="title_dialog_info">Aviso</string>
+    <string name="finish_action">¿Finalizar Accion?</string>
+    <string name="delete_action">¿Borrar Accion %1$s?</string>
+    <string name="delete_image">¿Borrar Imagen?</string>
+    <string name="delete_note">¿Borrar Nota?</string>
+    <string name="action_not_saved">No se guardaron los cambios ¿Desea salir sin guardar los cambios?</string>
+    <string name="save_action">Para continuar debe guardar los cambios</string>
+    <string name="permission_required">Se requieren todos los permisos para poder usar la aplicación</string>
+    <string name="other_action_is_tracking">Ya existe una acción con tracking iniciado</string>
+    <string name="edit_note">Editar nota</string>
+    <string name="add_note">Agregar nota</string>
+    <string name="search">Buscar…</string>
+    <string name="note_delete">La nota fue borrada</string>
+
+    <!-- Play Icon -->
+    <string name="play_icon_upper_path_data">M 44 32 L 44 64 L 100 64 L 100 64 Z</string>
+    <string name="play_icon_bottom_path_data">M 44 96 L 44 64 L 100 64 L 100 64 Z</string>
+
+    <!-- Pause Icon -->
+    <string name="pause_icon_upper_path_data">M 32 40 L 32 56  L 96 56 L 96 40 Z</string>
+    <string name="pause_icon_bottom_path_data">M 32 88 L 32 72 L 96 72 L 96 88 Z</string>
+
+    <!-- Stop Icon -->
+    <string name="stop_icon_upper_path_data">M 32 32 L 32 64 L 96 64 L 96 32 Z</string>
+    <string name="stop_icon_bottom_path_data">M 32 96 L 32 64 L 96 64 L 96 96 Z</string>
+
+    <!-- Groups -->
+    <string name="play_icon_group_top">upperpart</string>
+    <string name="play_icon_group_bottom">bottompart</string>
+    <string name="play_icon_group_parts">parts</string>
+
+    <!-- Path Name -->
+    <string name="play_icon_top_path_name">upper</string>
+    <string name="play_icon_bottom_path_name">bottom</string>
+
+    <!-- Waves -->
+    <string name="wave_1_path_data">M 17.502 3.5 L 14.701 3.5 C 10.99 3.5 8 5.675 8 9.455 L 8 127.75 L 24 127.75 L 24 9.455 C 24 5.675 21.213 3.5 17.502 3.5 Z</string>
+    <string name="wave_2_path_data">M 49.502 3.5 L 46.701 3.5 C 42.99 3.5 40 5.675 40 9.455 L 40 127.75 L 56 127.75 L 56 9.455 C 56 5.675 53.213 3.5 49.502 3.5 Z</string>
+    <string name="wave_3_path_data">M 81.502 3.5 L 78.701 3.5 C 74.99 3.5 72 5.675 72 9.455 L 72 127.75 L 88 127.75 L 88 9.455 C 88 5.675 85.213 3.5 81.502 3.5 Z</string>
+    <string name="wave_4_path_data">M 113.502 3.5 L 110.701 3.5 C 106.99 3.5 104 5.675 104 9.455 L 104 127.75 L 120 127.75 L 120 9.455 C 120 5.675 117.213 3.5 113.502 3.5 Z</string>
+
+    <string name="playing_identifier_group_wave_1">wave1</string>
+    <string name="playing_identifier_group_wave_2">wave2</string>
+    <string name="playing_identifier_group_wave_3">wave3</string>
+    <string name="playing_identifier_group_wave_4">wave4</string>
+
+    <string name="db">dB</string>
+    <string name="encoding_title">Codificando...</string>
+    <string name="hold_by_call">pausado por llamada</string>
+    <string name="encoding">codificando</string>
+    <string name="pause">pausar</string>
+    <string name="edit">editar</string>
+    <string name="confirm_cancel">Cancelar</string>
+    <string name="are_you_sure_cancel">¿Desea cancelar la grabación?</string>
+    <string name="no">No</string>
+    <string name="yes">Si</string>
+    <string name="recording">grabando</string>
+    <string name="not_permitted">No permitido</string>
+    <string-array name="encodings_values" translatable="false">
+        <item>wav</item>
+        <item>m4a</item>
+        <item>3gp</item>
+    </string-array>
+    <string name="days_symbol">"d"</string>
+    <plurals name="days">
+        <item quantity="one">%d dia</item>
+        <item quantity="other">%d dias</item>
+    </plurals>
+
+    <plurals name="hours">
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d horas</item>
+    </plurals>
+
+    <plurals name="minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minutos</item>
+    </plurals>
+
+    <plurals name="seconds">
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d segundos</item>
+    </plurals>
+    <string name="title_header">%1$s libre ~ %2$s restante</string>
+    <string name="size_gb">%1$.1f GB</string>
+    <string name="size_mb">%1$.1f MB</string>
+    <string name="size_kb">%1$.1f kb</string>
+    <string name="delete_recording">Borrar grabación</string>
+    <string name="file_not_found">Archivo no encontrado</string>
+    <string name="are_you_sure">"¿Esta seguro?"</string>
+    <string name="rename_recording">Renombrar grabación</string>
+
+    <!-- file picker-->
+    <string name="file_picker_go_back">Volver</string>
+    <string name="file_picker_selected_count">%1$d</string>
+    <string name="file_picker_request_permission_failed">Se requiere permiso para acceder al Espacio de Almacenamiento</string>
+    <string name="file_picker_tv_select_all">Todos</string>
+    <string name="file_picker_tv_deselect_all">Todos</string>
+    <string name="file_picker_tv_select_done">Aceptar</string>
+    <string name="file_picker_tv_sd_card">SD Card</string>
+    <string name="too_many_files_tips">Muchos archivos, cargando...</string>
+    <string name="max_select_count_tips">Solo puedes seleecionar %d item.</string>
+    <string name="empty_list_tips_file_picker">No hay nada aqui</string>
+
+    <!-- Drawer Names-->
+    <string name="projects">Proyectos</string>
+    <string name="events">Eventos</string>
+    <string name="actions">Acciones</string>
+    <string name="rrhh">Recursos Humanos</string>
+    <string name="messenger_service">Mensajeria</string>
+    <string name="update">Actualizar</string>
+    <string name="zone_select">Elegir Zona</string>
+    <string name="logout">Cerrar Sesión</string>
+
+    <string name="received">Recibidos</string>
+    <string name="sent">Enviados</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+<!--    Names TextView Items-->
+    <string name="projectName">Proyecto 123123</string>
+
+    <string name="not_upload_photo">No se pudo subir correctamente la foto</string>
+    <string name="enter_phone_number">Reingrese su número de teléfono</string>
+</resources>

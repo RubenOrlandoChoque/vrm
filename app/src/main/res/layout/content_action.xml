@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.ActionsListActivity"
+    tools:showIn="@layout/app_bar_action">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txt_count_instances1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50 acciones"
+            android:textColor="@color/black"
+            android:textSize="17dp"/>
+
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/instances_list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/view_zero_actions" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

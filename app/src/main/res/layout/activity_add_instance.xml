@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_title_orange"
+    tools:context=".Activities.AddInstanceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_events"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/content_events"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:elevation="8dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="34dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp">
+
+                        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                            android:id="@+id/cmb_event_types"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Tipo de evento*"
+                            app:met_floatingLabel="normal" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/txt_event_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_chrome_reader"
+                            android:hint="Nombre del evento*"
+                            android:imeOptions="actionNext"
+                            android:inputType="text|textCapSentences"
+                            android:maxLines="1"
+                            app:met_floatingLabel="normal" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/txt_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_subject"
+                            android:gravity="start"
+                            android:hint="Descripción"
+                            android:imeOptions="actionNext"
+                            android:inputType="text|textMultiLine"
+                            android:minLines="2"
+                            app:met_floatingLabel="normal" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/txt_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_home"
+                            android:hint="Dirección"
+                            android:imeOptions="actionNext"
+                            android:inputType="text|textCapSentences"
+                            android:maxLines="1"
+                            app:met_floatingLabel="normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/txt_datefrom"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableRight="@drawable/ic_event"
+                                android:hint="Fecha inicio*"
+                                android:imeOptions="actionNext"
+                                android:inputType="text|textCapSentences"
+                                android:maxLines="1"
+                                app:met_floatingLabel="normal" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/txt_timefrom"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:drawableRight="@drawable/ic_time"
+                                android:enabled="false"
+                                android:hint="Hora"
+                                android:imeOptions="actionNext"
+                                android:inputType="text|textCapSentences"
+                                android:maxLines="1"
+                                app:met_floatingLabel="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/txt_dateto"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableRight="@drawable/ic_event"
+                                android:hint="Fecha fin"
+                                android:imeOptions="actionDone"
+                                android:inputType="text|textCapSentences"
+                                android:maxLines="1"
+                                app:met_floatingLabel="normal" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/txt_timeto"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:drawableRight="@drawable/ic_time"
+                                android:enabled="false"
+                                android:hint="Hora"
+                                android:imeOptions="actionDone"
+                                android:inputType="text|textCapSentences"
+                                android:maxLines="1"
+                                app:met_floatingLabel="normal" />
+                        </LinearLayout>
+
+                        <include layout="@layout/content_add_organizers" />
+
+                        <include layout="@layout/content_add_speakers" />
+
+                        <include layout="@layout/content_geometry_map" />
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

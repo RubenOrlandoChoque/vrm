@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimeLineRecyclerView">
+        <attr name="sectionBackgroundColor" format="color" />
+        <attr name="sectionTitleTextColor" format="color" />
+        <attr name="sectionSubTitleTextColor" format="color" />
+        <attr name="timeLineColor" format="color" />
+        <attr name="timeLineWidth" format="dimension" />
+
+        <attr name="timeLineCircleColor" format="color" />
+        <attr name="timeLineCircleStrokeColor" format="color" />
+
+        <attr name="sectionTitleTextSize" format="dimension" />
+        <attr name="sectionSubTitleTextSize" format="dimension" />
+        <attr name="isSticky" format="boolean" />
+        <attr name="customDotDrawable" format="reference" />
+    </declare-styleable>
+</resources>

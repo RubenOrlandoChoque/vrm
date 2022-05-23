@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ActionsListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/menuColor"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarInfoEvent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+            <Button
+            android:id="@+id/btn_add1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:text="Guardar"
+            android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/icon_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:visibility="gone"
+                android:padding="20dp"
+                android:drawableLeft="@drawable/ic_add_black"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <include layout="@layout/content_info_event" />
+
+    <com.horus.vrmmobile.views.animatedvector.FloatingActionButtonTrack
+        android:id="@+id/play_stop_action1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="5dp"
+        app:FloatingActionButtonTrackMode="playToStop"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="mini"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="end|top" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

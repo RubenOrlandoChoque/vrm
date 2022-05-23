@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PhoneActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_mesadetrabajo1"
+        android:gravity="center"
+        android:id="@+id/loadingProgress"
+        android:orientation="vertical"
+        >
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mk_type="Sharingan"
+            app:mk_color="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="loading text"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:id="@+id/loading_text"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/verifyLayout"
+        android:orientation="vertical"
+        android:background="@drawable/login_mesadetrabajo1copia3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_circle"
+                android:src="@drawable/ic_lock_outline"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="#ffff"
+                android:textSize="16dp" />
+
+            <ScrollView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_white_border"
+                        android:layout_gravity="center_horizontal"
+                        android:weightSum="7">
+
+                        <com.rilixtech.CountryCodePicker
+                            android:id="@+id/ccp"
+                            app:ccp_hideNameCode="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:ccp_defaultNameCode="AR"
+                            app:ccp_showFullName="false"
+                            android:layout_gravity="center"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="5dp"
+                            app:ccp_textColor="#ffff"
+                            app:ccp_countryPreference="AR"/>
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"></LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/white_transparent"
+                            android:text="("/>
+                        <EditText
+                            android:textCursorDrawable = "@drawable/cursor_edit_text"
+                            android:id="@+id/phone_code"
+                            android:layout_width="50dp"
+                            android:textAlignment="center"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:background="@null"
+                            android:imeOptions="actionNext"
+                            android:hint="011"
+                            android:textColorHint="@color/white_transparent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="20dp"
+                            android:layout_marginRight="5dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/white_transparent"
+                            android:text=")"/>
+                        <EditText
+                            android:textCursorDrawable = "@drawable/cursor_edit_text"
+                            android:id="@+id/phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="5dp"
+                            android:textColorHint="@color/white_transparent"
+                            android:hint="155896545"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="300dp"
+                        android:layout_height="55dp"
+                        android:text="@string/log_in"
+                        android:textSize="17dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/corner_white_border"
+                        android:layout_gravity="center"
+                        android:id="@+id/loginButton"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/content_verify_code" />
+</RelativeLayout>

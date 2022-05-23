@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_event"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.skyfishjy.library.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rippleBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rb_color="@color/orange_light"
+        app:rb_duration="3000"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="1"
+        app:rb_scale="6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/info_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="12/09/2019 10:00 - 15/09/2019 11:00"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/txt_event"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Evento 1"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/txt_ie_count_actions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Cantidad de acciones: 5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+
+                    android:id="@+id/btn_ie_add"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:src="@drawable/group16" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.skyfishjy.library.RippleBackground>
+</androidx.cardview.widget.CardView>

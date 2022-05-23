@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.ActiveFormActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_title_green"
+        android:layout_height="200dp">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/title_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/form_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Form Name"
+                android:ellipsize="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/btn_lp_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="20dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:layout_below="@id/title_events"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/content_events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="8dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                app:cardElevation="10dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="6dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_marginTop="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/btn_fa_encuestas"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/fa_contador_button"
+                                    android:longClickable="false"
+                                    android:text="122"
+                                    android:textColor="@color/black"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="-5dp"
+                                    android:longClickable="false"
+                                    android:text="Realizadas"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_red" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/btn_fa_encuestas_sincronizadas"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/fa_contador_button"
+                                    android:longClickable="false"
+                                    android:text="12"
+                                    android:textColor="@color/black"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="-5dp"
+                                    android:longClickable="false"
+                                    android:text="Sincronizadas"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_fa_new_survey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nueva encuesta"
+                            android:layout_above="@+id/btn_fa_edit_survey"
+                            android:background="@drawable/bg_selector_green"/>
+
+                        <Button
+                            android:id="@+id/btn_fa_edit_survey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Editar encuesta"
+                            android:layout_above="@+id/btn_fa_syncronizar"
+                            android:background="@drawable/bg_selector_green"
+                            android:layout_marginTop="3dp"/>
+
+                        <Button
+                            android:id="@+id/btn_fa_syncronizar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sincronizar"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/bg_selector_green"
+                            android:layout_marginTop="3dp"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        <ImageView
+            android:layout_marginTop="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-20dp"
+            android:id="@+id/icon_calendar"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/circle_white"
+            android:padding="10dp"
+            android:src="@drawable/icon_survey"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

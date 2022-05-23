@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <RelativeLayout
+        android:id="@+id/content_search"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/content_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_search"
+            android:weightSum="2">
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple"
+                android:paddingLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="5dp"
+                android:background="@null"
+                android:maxLines="1"
+                android:inputType="text|textCapSentences"
+                android:id="@+id/txt_search"
+                android:imeOptions="actionSearch"
+                android:drawableLeft="@drawable/ic_search"
+                android:hint="Buscar"/>
+            <RelativeLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/purple"/>
+
+            <RelativeLayout
+                android:background="@drawable/bg_positions"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_scan"
+                    android:drawableLeft="@drawable/icon_barcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="35dp"
+                    android:background="@null"
+                    android:text="Escanear DNI"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/expansionLayout_dialog"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_buttons"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/person_list"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/content_fields"
+        android:orientation="vertical"
+        android:layout_below="@id/content_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_person"
+            android:maxLines="1"
+            android:id="@+id/txt_fullname"
+            android:inputType="text|textCapSentences"
+            android:imeOptions="actionNext"
+            android:layout_marginTop="10dp"
+            android:hint="Nombre y Apellido*"
+            app:met_floatingLabel="normal" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_study"
+            android:maxLines="1"
+            android:id="@+id/txt_profession"
+            android:inputType="text|textCapSentences"
+            android:imeOptions="actionNext"
+            android:hint="Profesión"
+            app:met_floatingLabel="normal" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_work"
+            android:maxLines="1"
+            android:id="@+id/txt_position"
+            android:inputType="text|textCapSentences"
+            android:imeOptions="actionNext"
+            android:hint="Cargo"
+            android:enabled="false"
+            app:met_floatingLabel="normal" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

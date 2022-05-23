@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_project"
+                android:icon="@drawable/group15"
+                android:title="@string/projects" />
+            <item
+                android:id="@+id/name_project"
+                android:title="Name"/>
+
+        <group
+            android:id="@+id/nav_stock_signals_group2"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_event"
+                android:icon="@drawable/evento"
+                app:actionLayout="@layout/count_events"
+                android:title="@string/events" />
+            <item
+                android:id="@+id/name_event"
+                android:title="Name"/>
+        </group>
+
+        <group
+            android:id="@+id/nav_stock_signals_group3"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_action"
+                android:icon="@drawable/acciones2"
+                android:title="@string/actions"/>
+        </group>
+
+        <group
+            android:id="@+id/nav_stock_signals_group4"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_rrhh"
+                android:icon="@drawable/ic_people_black"
+                android:title="@string/rrhh" />
+        </group>
+
+        <group
+            android:id="@+id/nav_stock_signals_group5"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_message"
+                android:icon="@drawable/mensajeria"
+                app:actionLayout="@layout/count_items"
+                android:title="@string/messenger_service"/>
+        </group>
+
+    </group>
+
+
+    <group android:checkableBehavior="single">
+
+        <group
+            android:id="@+id/nav_stock_signals_group6"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_update"
+                android:icon="@drawable/ic_cached_24px"
+                android:title="@string/update" />
+        </group>
+
+        <group
+            android:id="@+id/nav_stock_signals_group7"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_select_zone"
+                android:icon="@drawable/ic_map_24px"
+                android:title="@string/zone_select" />
+            <item
+                android:id="@+id/name_zone"
+                android:title="Name"/>
+        </group>
+
+        <group
+            android:id="@+id/nav_stock_signals_group8"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_to_app_24px"
+                android:title="@string/logout" />
+        </group>
+    </group>
+
+</menu>
+
+

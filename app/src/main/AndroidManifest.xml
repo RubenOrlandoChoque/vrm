@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.horus.vrmmobile">
+
+<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".VRMApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/titulo_app"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:theme,android:label,android:allowBackup">
+        <activity
+            android:name=".Activities.RecordingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.MessageComposeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.SurveysActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.SurveySyncActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.NoteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.ActionsListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.AddInstanceActivity" />
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:label="@string/titulo_app"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.PhoneActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.github.bkhezry.mapdrawingtools.ui.MapsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.ZoneListActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/titulo_app"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.NotificationsListActivity"
+            android:label="@string/titulo_app"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.ProjectListActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.NotificationActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.ListFormsActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.ActiveFormActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.OrganizationActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.OrganizationTreeActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.AddMemberActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.FullScreenImageActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.EventsActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.InfoEventActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/titulo_app"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Activities.PermissionRequestActivity"
+            android:label="@string/titulo_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths" />
+        </provider> <!-- [START firebase_service] -->
+        <service android:name=".services.NotificationFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".services.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service> <!-- [END firebase_iid_service] -->
+        <service
+            android:name=".services.NotificationJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.TrackingService" />
+        <service android:name=".services.SyncServiceTimer" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <receiver
+            android:name=".services.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

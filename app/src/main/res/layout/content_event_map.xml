@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_map"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    android:clipToPadding="true"
+    android:visibility="gone"
+    android:clipChildren="true"
+    android:layout_height="200dp">
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapViewPreview"
+        android:clipToPadding="true"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:clipChildren="true"
+        app:liteMode="true"
+        app:mapType="normal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</androidx.cardview.widget.CardView>

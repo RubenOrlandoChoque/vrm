@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/content_lf_row"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@null">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_green">
+        <TextView
+            android:id="@+id/txt_lf_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:text="Formulario 1"/>
+        <TextView
+            android:id="@+id/txt_fa_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="Descripciòn: Este es una formulario de relevamiento de eventos"/>
+        <TextView
+            android:id="@+id/txt_lf_date_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="Creado: 01-02-2019"/>
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/download_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/title_legend_attachment"
+                    android:src="@drawable/ic_cloud_download_white_24dp"/>
+
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/update_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/title_legend_attachment"
+                    android:src="@drawable/ic_sync"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:text="Encuestas"
+                    android:padding="3dp"
+                    android:layout_margin="3dp"/>
+
+                <TextView
+                    android:id="@+id/surveys_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:text="10"
+                    android:textStyle="bold"
+                    android:minWidth="30dp"
+                    android:background="@drawable/bg_count_survey"
+                    android:layout_margin="3dp"/>
+
+                <TextView
+                    android:id="@+id/surveys_sync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:text="9"
+                    android:textStyle="bold"
+                    android:minWidth="30dp"
+                    android:background="@drawable/bg_count_survey"
+                    android:layout_margin="3dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

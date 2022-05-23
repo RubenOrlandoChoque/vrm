@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.OrganizationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_title_violet"
+            android:layout_height="200dp">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/title_events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="RRHH"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"/>
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="-2dp"
+                    android:background="@null"
+                    android:paddingRight="10dp"
+                    android:text="Agregar"
+                    android:textColor="@color/purple_light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:padding="20dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:layout_below="@id/title_events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/content_events"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="8dp"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    app:cardElevation="10dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardCornerRadius="6dp"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:paddingTop="15dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/bg_search"
+                            android:weightSum="2">
+
+                            <EditText
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/purple"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:background="@null"
+                                android:maxLines="1"
+                                android:id="@+id/txt_search"
+                                android:drawableLeft="@drawable/ic_search"
+                                android:hint="Buscar"/>
+                            <RelativeLayout
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/purple"/>
+
+                            <RelativeLayout
+                                android:background="@drawable/bg_positions"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <Spinner
+                                    android:id="@+id/roles"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@null"></Spinner>
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/event_empty"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_events_empty"/>
+                            <TextView
+                                android:textSize="18dp"
+                                android:padding="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sin eventos"
+                                android:textAlignment="center"/>
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/member_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <ImageView
+                android:layout_marginTop="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-20dp"
+                android:id="@+id/icon_org"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/circle_white"
+                android:padding="10dp"
+                android:src="@drawable/icon_organization"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

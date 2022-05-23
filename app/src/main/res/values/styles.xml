@@ -1,0 +1,97 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="listPreferredItemPaddingLeft">1dp</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+        <item name="android:editTextStyle">@style/RobotoEditTextStyle</item>
+        <item name="android:datePickerDialogTheme">@style/Dialog.Theme</item>
+        <item name="android:timePickerDialogTheme">@style/Dialog.Theme</item>
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="RobotoEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="listPreferredItemPaddingLeft">18dp</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="myDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Dialog.Theme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">15dp</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <!--<style name="TextLabel2" parent="TextAppearance.Design.Hint">-->
+        <!--<item name="android:textSize">13dp</item>-->
+        <!--<item name="android:gravity">left</item>-->
+    <!--</style>-->
+
+    <style name="MaterialSearchViewStyle">
+        <!-- Hint for edit text -->
+        <item name="android:hint">@string/search</item>
+        <item name="searchBackground">@color/toolbarBackgroundColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="searchCloseIcon">@drawable/ic_clear_white</item>
+        <item name="searchBackIcon">@drawable/ic_arrow</item>
+    </style>
+
+    <style name="AlertDialogRecorder" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="VRMFilePickerTheme" parent="FilePickerThemeRail">
+        <item name="colorPrimary">@color/toolbarBackgroundColor</item>
+    </style>
+
+
+    <style name="AppTheme.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/primaryDark</item>
+        <item name="android:elevation" tools:targetApi="lollipop">4dp</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="listPreferredItemPaddingLeft">1dp</item>
+    </style>
+
+</resources>

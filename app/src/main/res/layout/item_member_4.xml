@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.jackandphantom.circularimageview.CircleImage
+        android:id="@+id/img_sex"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/user_default"/>
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/img_sex"
+        android:layout_toStartOf="@id/btn_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_name_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/gray_dark"
+            android:text="Juan Carlos Lopez"/>
+        <TextView
+            android:id="@+id/txt_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="13dp"
+            android:text="Jefe de Programadores"/>
+        <TextView
+            android:id="@+id/txt_profession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="13dp"
+            android:text="Lic. Analista de Sistemas"/>
+    </LinearLayout>
+</RelativeLayout>

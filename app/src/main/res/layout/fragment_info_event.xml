@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/txt_event_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Reunión"
+                    android:textColor="@color/yellow"
+                    android:textSize="17dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="0dp"
+                    android:backgroundTint="@color/cardColor"
+                    app:cardMaxElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/txt_list_count_speakers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Datos de la Acción"
+                                android:textColor="@color/gray_dark"
+                                android:textSize="18dp" />
+
+                            <LinearLayout
+                                android:id="@+id/gBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true">
+                                <Button
+
+                                    android:layout_centerVertical="true"
+                                    android:id="@+id/btn_cancel_action_edition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:textSize="16dp"
+                                    android:text="Cancelar"
+                                    android:layout_alignParentRight="true"
+                                    android:textColor="@color/violet"
+                                    android:visibility="gone"
+                                    android:background="@null"/>
+                                <Button
+                                    android:layout_centerVertical="true"
+                                    android:id="@+id/btn_edit_action_data"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:textSize="16dp"
+                                    android:drawableLeft="@drawable/ic_edit"
+                                    android:textColor="@color/orange"
+                                    android:background="@null"/>
+                                <Button
+                                    android:layout_centerVertical="true"
+                                    android:id="@+id/btn_save_action_data"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:textSize="16dp"
+                                    android:text="Guardar"
+                                    android:layout_alignParentRight="true"
+                                    android:textColor="@color/green"
+                                    android:visibility="gone"
+                                    android:background="@null"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/silver" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="Descripción"
+                                android:layout_height="wrap_content" />
+
+                            <EditText
+                                android:maxLength="512"
+                                android:id="@+id/txt_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top"
+                                android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+                                android:maxLines="10"
+                                android:minLines="1" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <include layout="@layout/content_action_objectives" />
+
+                <include layout="@layout/content_event_fields" />
+
+                <include layout="@layout/content_event_map" />
+
+                <include
+                    layout="@layout/content_action_organizers"
+                    android:visibility="gone" />
+
+                <include layout="@layout/content_action_speakers" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/contenedor_play"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="@color/orange"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<com.horus.vrmmobile.views.PlayPauseView-->
+        <!--android:id="@+id/play_action"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+
+        <!--android:layout_gravity="center"-->
+        <!--android:clickable="true"-->
+        <!--android:foreground="?android:selectableItemBackground"-->
+        <!--android:stateListAnimator="@animator/button_elevation" />-->
+
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

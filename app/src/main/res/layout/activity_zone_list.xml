@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".Activities.ZoneListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_gradient"
+            android:layout_height="200dp">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/pnl_az_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_toLeftOf="@id/profile_image"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/txt_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mariano Rodriguez"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/unnamed"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/white"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Listado de zonas"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/pnl_az_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/pnl_az_header"
+                android:padding="20dp"
+                android:clipToPadding="false"
+                android:clipChildren="false">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/content_events"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="8dp"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    app:cardElevation="10dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardCornerRadius="6dp"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:paddingTop="15dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_marginTop="18dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ProgressBar
+                                android:id="@+id/pb_az_loading_zones"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/tv_az_zones_empty"
+                                android:textSize="18dp"
+                                android:visibility="gone"
+                                android:padding="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="No tiene formularios asignados. Contactese con el administrador"
+                                android:textAlignment="center"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_az_list_zones"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

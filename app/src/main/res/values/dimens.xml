@@ -1,0 +1,42 @@
+<resources>
+    <dimen name="pause_bar_width">15dp</dimen>
+    <dimen name="pause_bar_distance">0dp</dimen>
+    <dimen name="pause_bar_height">30dp</dimen>
+
+    <dimen name="h1">20sp</dimen>
+    <dimen name="h2">18sp</dimen>
+    <dimen name="h3">16sp</dimen>
+    <dimen name="h4">14sp</dimen>
+    <dimen name="h5">12sp</dimen>
+    <dimen name="h6">10sp</dimen>
+
+    <dimen name="notes_gap">10dp</dimen>
+
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="padding_list_row">16dp</dimen>
+    <dimen name="messages_padding_left">72dp</dimen>
+    <dimen name="icon_width_height">40dp</dimen>
+    <dimen name="msg_text_primary">16sp</dimen>
+    <dimen name="msg_text_secondary">14sp</dimen>
+    <dimen name="icon_star">25dp</dimen>
+    <dimen name="icon_text">22dp</dimen>
+    <dimen name="timestamp">12dp</dimen>
+
+    <dimen name="spacing_micro">4dp</dimen>
+    <dimen name="spacing_smaller">6dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_smaller_x2">12dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_extra_large">32dp</dimen>
+    <dimen name="spacing_large_x2">48dp</dimen>
+    <dimen name="spacing_extra_large_x2">64dp</dimen>
+    <dimen name="spacing_huge">72dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">150dp</dimen>
+
+</resources>

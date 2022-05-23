@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.NotificationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbarBackgroundColor">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:id="@+id/main_toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-15dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_arrow" />
+
+                <TextView
+                    android:id="@+id/txt_ab_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/btn_back"
+                    android:layout_toLeftOf="@+id/btn_search"
+                    android:text="Mensaje"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/content_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarThumbVertical="@drawable/scrollbar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        android:id="@+id/inAddresses"
+                        layout="@layout/include_message_addresses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <include
+                        android:id="@+id/inHeaders"
+                        layout="@layout/include_message_headers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inAddresses" />
+
+                    <!--<include-->
+                        <!--android:id="@+id/inAttachments"-->
+                        <!--layout="@layout/include_message_attachments"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:visibility="gone"-->
+                        <!--app:layout_constraintStart_toStartOf="parent"-->
+                        <!--app:layout_constraintTop_toBottomOf="@id/inHeaders" />-->
+                    <View
+                        android:id="@+id/vSeparatorHeaderMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@color/lightColorSeparator"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inHeaders" />
+
+                    <include
+                        android:id="@+id/inNavigation"
+                        layout="@layout/include_message_navigation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/vSeparatorHeaderMessage" />
+
+                    <!--<eu.faircode.email.ContentLoadingProgressBar-->
+                    <!--android:id="@+id/pbBody"-->
+                    <!--style="@style/Base.Widget.AppCompat.ProgressBar"-->
+                    <!--android:layout_width="48dp"-->
+                    <!--android:layout_height="48dp"-->
+                    <!--android:indeterminate="true"-->
+                    <!--android:padding="12dp"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@id/inNavigation" />-->
+
+                    <TextView
+                        android:id="@+id/tvNoInternetBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="@string/title_no_internet"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inNavigation" />
+
+                    <TextView
+                        android:id="@+id/tvBody"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="6dp"
+                        android:fontFamily="monospace"
+                        android:minHeight="60dp"
+                        android:paddingBottom="6dp"
+                        android:text="Body"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvNoInternetBody" />
+
+                    <include
+                        android:id="@+id/InCalendar"
+                        layout="@layout/include_message_calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvBody" />
+
+                    <include
+                        android:id="@+id/inAttachmentsLinks"
+                        layout="@layout/include_message_attachments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/InCalendar" />
+
+                    <include
+                        android:id="@+id/inImages"
+                        layout="@layout/include_message_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inAttachmentsLinks" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
+
+

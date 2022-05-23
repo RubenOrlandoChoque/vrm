@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/card_events"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:elevation="0dp"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="0.0px"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardCornerRadius="6dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_il_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/acciones2"
+            android:layout_alignParentRight="true"
+            android:background="@null"/>
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/description"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_action_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12/09/2019 10:00 - 15/09/2019 11:00"
+                android:textColor="@color/gray"
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/txt_action_name_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:text="Action name"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:orientation="vertical"
+            android:layout_width="45dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btn_delete_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete_35dp"
+                android:background="@null"/>
+
+            <com.skyfishjy.library.RippleBackground
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pulsator"
+                app:rb_color="@color/orange_light"
+                app:rb_radius="5dp"
+                app:rb_rippleAmount="1"
+                app:rb_duration="2000"
+                app:rb_scale="5">
+                <ImageButton
+                    android:id="@+id/btn_stop_action_tracking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_stop"
+                    android:background="@null"
+                    android:layout_alignParentRight="true"/>
+            </com.skyfishjy.library.RippleBackground>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

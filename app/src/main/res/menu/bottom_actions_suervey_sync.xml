@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_sync_survey"
+        android:icon="@drawable/ic_cloud_upload_white_24dp"
+        android:title="@string/action_sync_survey" />
+
+    <item
+        android:id="@+id/action_refresh_sync"
+        android:icon="@drawable/ic_sync"
+        android:title="@string/action_refresh_sync" />
+
+    <item
+        android:id="@+id/action_back"
+        android:icon="@drawable/ic_arrow_back_black_24dp"
+        android:title="@string/action_back" />
+
+    <item
+        android:id="@+id/action_accept"
+        android:icon="@drawable/ic_done_white"
+        android:title="@string/accept" />
+
+</menu>

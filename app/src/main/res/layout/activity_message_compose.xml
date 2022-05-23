@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.NotificationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/menuColor">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:id="@+id/main_toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-15dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_arrow" />
+
+                <TextView
+                    android:id="@+id/txt_ab_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/btn_back"
+                    android:layout_toLeftOf="@+id/btn_search"
+                    android:text="Redactar Mensaje"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.MessageComposeActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<Spinner-->
+                <!--android:id="@+id/spIdentity"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/etExtra"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:hint="user"-->
+                <!--android:inputType="text"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/tvDomain"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/spIdentity" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tvDomain"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="12dp"-->
+                <!--android:text="\@example.com"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                <!--app:layout_constraintBottom_toBottomOf="@+id/etExtra"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@id/etExtra"-->
+                <!--app:layout_constraintTop_toTopOf="@+id/etExtra" />-->
+
+                <!--<MultiAutoCompleteTextView-->
+                <!--android:id="@+id/etTo"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:hint="@string/title_to"-->
+                <!--android:imeOptions="actionNext"-->
+                <!--android:inputType="textEmailAddress"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/ivToAdd"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/etExtra" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/ivToAdd"-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:contentDescription="@string/title_legend_pick"-->
+                <!--app:srcCompat="@drawable/baseline_person_24"-->
+                <!--app:layout_constraintBottom_toBottomOf="@id/etTo"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@id/etTo"-->
+                <!--app:layout_constraintTop_toTopOf="@+id/etTo" />-->
+
+                <!--<MultiAutoCompleteTextView-->
+                <!--android:id="@+id/etCc"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:hint="@string/title_cc"-->
+                <!--android:imeOptions="actionNext"-->
+                <!--android:inputType="textEmailAddress"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/ivCcAdd"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/etTo" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/ivCcAdd"-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:contentDescription="@string/title_legend_pick"-->
+                <!--app:srcCompat="@drawable/baseline_person_24"-->
+                <!--app:layout_constraintBottom_toBottomOf="@id/etCc"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@id/etCc"-->
+                <!--app:layout_constraintTop_toTopOf="@+id/etCc" />-->
+
+                <!--<MultiAutoCompleteTextView-->
+                <!--android:id="@+id/etBcc"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:hint="@string/title_bcc"-->
+                <!--android:imeOptions="actionNext"-->
+                <!--android:inputType="textEmailAddress"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/ivBccAdd"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/etCc" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/ivBccAdd"-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:contentDescription="@string/title_legend_pick"-->
+                <!--app:srcCompat="@drawable/baseline_person_24"-->
+                <!--app:layout_constraintBottom_toBottomOf="@id/etBcc"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toEndOf="@id/etBcc"-->
+                <!--app:layout_constraintTop_toTopOf="@+id/etBcc" />-->
+
+                <EditText
+                    android:id="@+id/etSubject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="@string/title_subject"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailSubject|textCapSentences|textAutoCorrect"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintEnd_toStartOf="@+id/ivCcBcc"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <!--app:layout_constraintTop_toBottomOf="@+id/etBcc"-->
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/ivCcBcc"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:contentDescription="@string/title_show_addresses"
+                    app:layout_constraintBottom_toBottomOf="@id/etSubject"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/etSubject"
+                    app:layout_constraintTop_toTopOf="@+id/etSubject"
+                    app:srcCompat="@drawable/ic_subject_black_24dp" />
+
+                <View
+                    android:id="@+id/vSeparatorAttachments"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/lightColorSeparator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etSubject" />
+
+
+                <!--<TextView-->
+                <!--android:id="@+id/tvNoInternetAttachments"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/title_no_internet"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                <!--app:layout_constraintEnd_toEndOf="@id/rvAttachment"-->
+                <!--app:layout_constraintStart_toStartOf="@id/rvAttachment"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/rvAttachment" />-->
+
+                <!--<View-->
+                <!--android:id="@+id/vSeparator"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:background="@color/lightColorSeparator"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/vSeparatorAttachments" />-->
+
+                <EditText
+                    android:id="@+id/etBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@null"
+                    android:fontFamily="monospace"
+                    android:gravity="top"
+                    android:hint="@string/title_body_hint"
+                    android:inputType="textCapSentences|textMultiLine|textAutoCorrect"
+                    android:minHeight="120dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vSeparatorAttachments" />
+
+                <!--<TextView-->
+                <!--android:visibility="gone"-->
+                <!--android:id="@+id/tvNoInternet"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/title_no_internet"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                <!--app:layout_constraintBottom_toBottomOf="@id/etBody"-->
+                <!--app:layout_constraintEnd_toEndOf="@id/etBody"-->
+                <!--app:layout_constraintStart_toStartOf="@id/etBody"-->
+                <!--app:layout_constraintTop_toTopOf="@id/etBody" />-->
+
+                <!--<View-->
+                <!--android:id="@+id/vSeparatorBody"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:background="@color/lightColorSeparator"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/etBody" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tvSignature"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:fontFamily="monospace"-->
+                <!--android:text="Signature"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/vSeparatorBody" />-->
+
+                <View
+                    android:id="@+id/vSeparatorSignature"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/lightColorSeparator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etBody" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAttachment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vSeparatorSignature" />
+
+                <View
+                    android:id="@+id/vSeparatorAudios"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/lightColorSeparator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvAttachment" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/audio_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vSeparatorAudios">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:id="@+id/vSeparatorImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/lightColorSeparator"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/audio_list" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vSeparatorImages" />
+
+
+                <!--<TextView-->
+                <!--android:id="@+id/tvReferenceHint"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:text="@string/title_no_format"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                <!--android:textStyle="italic"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/ibReferenceEdit"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/vSeparatorSignature" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tvReference"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="6dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:fontFamily="monospace"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+                <!--android:textIsSelectable="true"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/tvReferenceHint" />-->
+
+                <!--<ImageButton-->
+                <!--android:id="@+id/ibReferenceEdit"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:contentDescription="@string/title_legend_edit"-->
+                <!--app:srcCompat="@drawable/baseline_edit_24"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/ibReferenceImages"-->
+                <!--app:layout_constraintTop_toTopOf="@id/tvReferenceHint" />-->
+
+                <!--<ImageButton-->
+                <!--android:id="@+id/ibReferenceImages"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:contentDescription="@string/title_legend_show_images"-->
+                <!--app:srcCompat="@drawable/baseline_image_24"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="@id/tvReferenceHint" />-->
+
+                <!--<androidx.constraintlayout.widget.Group-->
+                <!--android:id="@+id/grpHeader"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:constraint_referenced_ids="spIdentity,etTo,ivToAdd,etSubject,vSeparator" />-->
+
+                <!--<androidx.constraintlayout.widget.Group-->
+                <!--android:id="@+id/grpExtra"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:constraint_referenced_ids="etExtra,tvDomain" />-->
+
+                <!--<androidx.constraintlayout.widget.Group-->
+                <!--android:id="@+id/grpAddresses"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:constraint_referenced_ids="etCc,ivCcAdd,etBcc,ivBccAdd" />-->
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/grpAttachments"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:constraint_referenced_ids="vSeparatorSignature,rvAttachment" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/grpImages"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:constraint_referenced_ids="vSeparatorImages,rvImage" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/grpAudios"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:constraint_referenced_ids="vSeparatorAudios,audio_list" />
+
+                <!--<androidx.constraintlayout.widget.Group-->
+                <!--android:id="@+id/grpSignature"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:constraint_referenced_ids="vSeparatorSignature,tvSignature" />-->
+
+                <!--<androidx.constraintlayout.widget.Group-->
+                <!--android:id="@+id/grpReference"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--app:constraint_referenced_ids="tvReferenceHint,tvReference" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/edit_bar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/lightColorSeparator"
+            app:itemIconTint="@color/bottomnav_foreground"
+            app:itemTextColor="@color/bottomnav_foreground"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/action_media" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/menuColor"
+            app:itemIconTint="@color/bottomnav_foreground"
+            app:itemTextColor="@color/bottomnav_foreground"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/action_compose" />
+
+        <!--<eu.faircode.email.ContentLoadingProgressBar-->
+        <!--android:id="@+id/pbWait"-->
+        <!--style="@style/Base.Widget.AppCompat.ProgressBar"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:indeterminate="true"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

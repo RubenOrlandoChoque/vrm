@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		android:id="@+id/zero_photos_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="40dp"
+		android:visibility="visible"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<ImageView
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:layout_above="@+id/text1"
+			android:layout_centerHorizontal="true"
+			android:src="@drawable/ic_photo_camera_black"
+			/>
+
+	<TextView
+			android:id="@+id/text1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:gravity="center"
+			android:text="No hay Fotos"
+			android:textColor="@color/black"
+			android:textSize="@dimen/h1"
+			/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/text1"
+		android:layout_marginTop="0dp"
+		android:gravity="center"
+		android:layout_centerInParent="true"
+		android:paddingTop="10dp"
+		android:text="Haz click en + , para añadir una foto"
+		android:textColor="@color/black"
+		android:textSize="@dimen/h3" />
+
+
+</RelativeLayout>
